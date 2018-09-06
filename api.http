@@ -1,0 +1,45 @@
+@host = http://localhost:8181
+
+### newEvent
+POST {{host}}/events
+Content-Type: application/json
+
+{
+    "name": "CEA ",
+    "startdate": 768346784368,
+    "enddate": 43988933,
+    "duration": 88,
+    "location": {
+        "name": "Pena blanca cortes, sps ",
+        "address": "La Guama, cortes",
+        "country": "HND",
+        "opentime": 10,
+        "closetime": 15,
+        "halls": [{
+            "name": "Centro Educational Adventista",
+            "location": "Calle principal pena blanca",
+            "capacity":18
+        }]
+    }
+}
+
+### get events http
+GET {{host}}/events
+
+### get events https
+@hostTLS = https://localhost:9191
+GET {{hostTLS}}/events
+
+### kumulus api post
+@hostKumulus = https://push.kumulos.com
+POST {{hostKumulus}}/channels/8/subscriptions
+Authorization: 53593bab-99ed-41d0-bc55-305fd21b55d3:asc9QEfrO/pKEAYCorVEF8FPtoPa1wYwaWaH
+Content-Type: application/json
+
+
+
+{
+    "installIds":"1962E55A-D6FC-488B-B5EB-4DB3E3FB0147"
+}
+
+

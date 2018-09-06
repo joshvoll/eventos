@@ -1,0 +1,24 @@
+http://localhost:8181
+
+Content-Type: application/json
+POST /events
+{
+    "name": "Barcenola",
+    "startdate": 768346784368,
+    "enddate": 43988933,
+    "duration": 88,
+    "location": {
+        "name": "Marathon mall  ",
+        "address": "Convention center miami arts",
+        "country": "HND",
+        "opentime": 10,
+        "closetime": 15,
+        "halls": [{
+            "name": "best place to work with ",
+            "location": "Quantas",
+            "capacity":250
+        }]
+    }
+}
+
+
